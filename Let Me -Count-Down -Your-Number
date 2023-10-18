@@ -1,0 +1,16 @@
+input1 = int(input("type number here"))
+count = 0
+x = 1
+
+flag = True
+
+while(flag):
+    print("Number", x)
+    x = x + 1
+    if x > input1:
+     flag = False
+    print("continuing") 
+
+print()
+print(count) 
+print("good bye")   
