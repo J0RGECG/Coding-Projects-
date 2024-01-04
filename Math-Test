@@ -1,0 +1,79 @@
+import random 
+import time 
+
+def countdown(seconds):
+    while seconds > 0:
+        print(seconds ,"seconds")
+        time.sleep(1)
+        seconds -= 1
+
+    print("Countdown finished!")
+
+
+input2_Lab = input("Hello this is a math mini quiz, show off your skills and Have fun!!!!\nLets get started by typing in your fav color")
+numbers = random.randint(0,151)
+
+
+Ran = random.randint(0,70)
+
+
+
+for i in range(4):
+    print(numbers, "*",Ran , "=")
+    input3 = int(input("Answer:"))
+    Y = numbers * Ran
+    numbers = Ran + 9
+    Ran = numbers + 4
+    point_list = 0
+    if (input3 == Y ):
+      print("correct", point_list+1,("ponit"))
+    if(input3 != Y):
+      print("incorcet\nCorrect Answer",Y ,",",point_list- 1,("ponit"))
+  
+
+
+input6 = input("lets try something new, you will now be timed.Wait for the timmer to end and type your answer.\n what is your fav type of food.")
+
+
+for y in range (4):
+    Y = numbers * Ran
+    print(numbers,"*",Ran,"=")
+    countdown_time = 75
+    countdown(countdown_time)
+
+    input7 = int(input("time up, your final answer:"))
+    numbers = Ran +1
+    Ran = numbers + 1
+    H = 0
+    if input7 == Y:
+       print("corrct",H+1,("points"))
+    if input7 != Y:
+       print("not right",Y,H-1,("points"))
+          
+   
+    
+
+
+
+
+
+  
+
+ 
+
+ 
+    
+    
+    
+
+
+
+    
+
+
+    
+
+       
+
+
+
