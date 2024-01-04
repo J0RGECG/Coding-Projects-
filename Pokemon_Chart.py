@@ -1,14 +1,6 @@
 import tkinter as tk
 root = tk.Tk()
 root.geometry("700x500")
-my_topframe = tk.Frame(root,highlightthickness=4)
-my_topframe.pack()
-
-mybotton =tk.Frame(root,highlightthickness=4)
-mybotton.pack()
-
-lastframe = tk.Frame(root,highlightthickness=4)
-lastframe.pack()
 
 def normal_weak():
    labble = tk.Label(root,text="normal weakness")
@@ -156,65 +148,112 @@ def fight_weakness():
    weakness2.pack()
    weakness3.pack()
 
+def ground_weakness():
+   labble = tk.Label(root,text="GROUND WEAKNESS")
+   labble.pack()
+   weakness1 = tk.Label(root,text="WATER",fg="blue")
+   weakness2 = tk.Label(root,text='GRASS',fg="green" )
+   weakness3 = tk.Label(root,text="ICE",foreground="#0D98BA")
+   weakness1.pack()
+   weakness2.pack()
+   weakness3.pack()
+
+def steel_weakness():
+   labble = tk.Label(root,text="STEEL WEAKNESS")
+   labble.pack()
+   weakness1 = tk.Label(root,text="FIRE",fg="red")
+   weakness2 = tk.Label(root,text='FIGHTING',foreground="#8B0000")
+   weakness3 = tk.Label(root,text='GROUND',foreground="#5C4033")
+   weakness1.pack()
+   weakness2.pack()
+   weakness3.pack()
+
+def poison_weakness():
+   labble = tk.Label(root,text="POISON WEAKNESS")
+   labble.pack()
+   weakness1 = tk.Label(root,text='GROUND',foreground="#5C4033")
+   weakness2 = tk.Label(root,text= "PSYCHIC",fg="purple")
+   weakness1.pack()
+   weakness2.pack()
+
+
+def button_for_chart():
+
+   normal = tk.Button(my_topframe,text="NORMAL",fg="gray",font=("arial",17),width=7,height=1,command= normal_weak)
+   normal.pack(side="left")
+
+   flying = tk.Button(my_topframe,text="FLYING",foreground="#89CFF0",font=("arial",17),width=7,height=1,command=flying_weak)
+   flying.pack(side="left")
+
+   psychic = tk.Button(my_topframe,text="PSYCHIC",fg="purple",font=('arial',17),width=7,height=1,command=psychic_weak)
+   psychic.pack(side="left")
+
+   rock = tk.Button(my_topframe,text="ROCK",fg="brown",font=("arial",17),width=7,height=1,command=rock_weak)
+   rock.pack(side='left')
+
+   bug = tk.Button(my_topframe,text="BUG",foreground="#90EE90",font=('arial',17),width=7,height=1,command=bug_weakness)
+   bug.pack(side="left")
+
+   dark = tk.Button(my_topframe,text="DARK",fg="black",font=('arial',17),width=7,height=1,command=dark_weakness)
+   dark.pack(side="left")
+
+   Ghost = tk.Button(mybotton,text="GHOST",foreground="#CBC3E3",font=('arial',17),width=7,height=1,command=Ghost_weakness)
+   Ghost.pack(side="left")
+
+   water = tk.Button(mybotton,text="WATER",fg="blue",font=('arial',17),width=7,height=1,command=water_weakness)
+   water.pack(side="left")
+
+   grass = tk.Button(mybotton,text='GRASS',fg="green",font=('arial',17),width=7,height=1,command=grass_weakness)
+   grass.pack(side="left")
+
+   electric = tk.Button(mybotton,text="ELECTRIC",foreground="#8B8000",font=("arial",17),width=7,height=1,command=electric_weakness)
+   electric.pack(side="left")
+
+   fire = tk.Button(mybotton,text="FIRE",fg="red",font=('arial',17),width=7,height=1,command=fire_weakness)
+   fire.pack(side='left')
+
+   dragon = tk.Button(mybotton,text="DRAGON",foreground='#00008B',font=('arial',17),width=7,height=1,command= dragon_weakness)
+   dragon.pack(side="left")
+
+   ice = tk.Button(lastframe,text="ICE",foreground="#0D98BA",font=('arial',17),width=7,height=1,command=ice_weakness)
+   ice.pack(side="left")
+
+   fairy = tk.Button(lastframe,text="FAIRY",fg="pink",font=('arial',17),width=7,height=1,command=fairy_weakness)
+   fairy.pack(side="left")
+
+   fighting = tk.Button(lastframe,text='FIGHTING',foreground="#8B0000",font=('arial',17),width=7,height=1,command=fight_weakness)
+   fighting.pack(side="left")
+
+   ground = tk.Button(lastframe,text='GROUND',foreground="#5C4033",font=('arial',17),width=7,height=1,command=ground_weakness)
+   ground.pack(side='left')
+
+   steel = tk.Button(lastframe,text='STEEL',foreground="#D3D3D3",font=('arial',17),width=7,height=1,command=steel_weakness)
+   steel.pack(side="left")
+
+   poison = tk.Button(lastframe,text='POISON',fg='purple',font=('arial',17),width=7,height=1,command=poison_weakness)
+   poison.pack(side="left")
+
+Entrybox1 = tk.Entry()
+Entrybox1.pack()
+labbleTop = tk.Label(root,text="Hello welcome to POkX.",font=('arial',18))
+labbleTop.pack()
+
+ButtonforPK = tk.Button(root,text="Click to view type chart!",command=button_for_chart)
+ButtonforPK.pack()
 
 
 
 
+my_topframe = tk.Frame(root,highlightthickness=4)
+my_topframe.pack()
+
+mybotton =tk.Frame(root,highlightthickness=4)
+mybotton.pack()
+
+lastframe = tk.Frame(root,highlightthickness=4)
+lastframe.pack()
 
 
-normal = tk.Button(my_topframe,text="NORMAL",fg="gray",font=("arial",17),width=7,height=1,command= normal_weak)
-normal.pack(side="left")
-
-flying = tk.Button(my_topframe,text="FLYING",foreground="#89CFF0",font=("arial",17),width=7,height=1,command=flying_weak)
-flying.pack(side="left")
-
-psychic = tk.Button(my_topframe,text="PSYCHIC",fg="purple",font=('arial',17),width=7,height=1,command=psychic_weak)
-psychic.pack(side="left")
-
-rock = tk.Button(my_topframe,text="ROCK",fg="brown",font=("arial",17),width=7,height=1,command=rock_weak)
-rock.pack(side='left')
-
-bug = tk.Button(my_topframe,text="BUG",foreground="#90EE90",font=('arial',17),width=7,height=1,command=bug_weakness)
-bug.pack(side="left")
-
-dark = tk.Button(my_topframe,text="DARK",fg="black",font=('arial',17),width=7,height=1,command=dark_weakness)
-dark.pack(side="left")
-
-Ghost = tk.Button(mybotton,text="GHOST",foreground="#CBC3E3",font=('arial',17),width=7,height=1,command=Ghost_weakness)
-Ghost.pack(side="left")
-
-water = tk.Button(mybotton,text="WATER",fg="blue",font=('arial',17),width=7,height=1,command=water_weakness)
-water.pack(side="left")
-
-grass = tk.Button(mybotton,text='GRASS',fg="green",font=('arial',17),width=7,height=1,command=grass_weakness)
-grass.pack(side="left")
-
-electric = tk.Button(mybotton,text="ELECTRIC",foreground="#8B8000",font=("arial",17),width=7,height=1,command=electric_weakness)
-electric.pack(side="left")
-
-fire = tk.Button(mybotton,text="FIRE",fg="red",font=('arial',17),width=7,height=1)
-fire.pack(side='left')
-
-dragon = tk.Button(mybotton,text="DRAGON",foreground='#00008B',font=('arial',17),width=7,height=1)
-dragon.pack(side="left")
-
-ice = tk.Button(lastframe,text="ICE",foreground="#0D98BA",font=('arial',17),width=7,height=1)
-ice.pack(side="left")
-
-fairy = tk.Button(lastframe,text="FAIRY",fg="pink",font=('arial',17),width=7,height=1)
-fairy.pack(side="left")
-
-fighting = tk.Button(lastframe,text='FIGHTING',foreground="#8B0000",font=('arial',17),width=7,height=1)
-fighting.pack(side="left")
-
-ground = tk.Button(lastframe,text='GROUND',foreground="#5C4033",font=('arial',17),width=7,height=1)
-ground.pack(side='left')
-
-steel = tk.Button(lastframe,text='STEEL',foreground="#D3D3D3",font=('arial',17),width=7,height=1)
-steel.pack(side="left")
-
-poison = tk.Button(lastframe,text='POISON',fg='purple',font=('arial',17),width=7,height=1)
-poison.pack(side="left")
     
 
 
