@@ -1,0 +1,113 @@
+import random 
+import time
+import sys
+
+numbers = random.randint(0,151)
+Ran = random.randint(0,70)
+
+def countdown(seconds):
+    while seconds > 0:
+        print(seconds ,"seconds")
+        time.sleep(1)
+        seconds -= 1
+
+    print("Countdown finished!")
+
+def countdown_custom(sec):
+    while sec > 0:
+        print(sec ,"seconds")
+        time.sleep(1)
+        sec -= 1
+
+def whole_code():
+    numbers = random.randint(0,151)
+    Ran = random.randint(0,70)
+
+
+    #if input2_Lab == "Custom":
+        #Custom_input = input("\nWelcome to custiom mode\nType the following to atived!   :")
+
+    #if Custom_input == "Yes":
+        #Custom_input2 = int(input("\nHow many seconds would you like set on you time. ") )  
+
+
+
+    #if Custom_input2 == "Yes":
+        #while True:
+            #countdown_timer = Custom_input2
+            #countdown_custom(countdown_timer)
+            #break
+
+    if (input2_Lab == "Infinty" or "infinty"):
+        while True:
+            print("Infinty Mode\n",numbers,"*",Ran,"=")
+            input_1 = int(input("Answer:"))
+            Y = numbers * Ran
+            Ran = numbers + 9
+            numbers = Ran + 4
+            point_list = 0 
+            if (input_1 == Y):
+                print("Keep it going!",point_list+1,("ponit"))
+            if (input_1 != Y):
+                print("Loop ended try agien.")
+                break
+               
+
+    
+    point_list = 0 
+    if (input2_Lab == "Normal" or "normal"):
+        for i in range(10):
+            print('Normal Mode\n',numbers, "*",Ran , "=")
+            input3 = int(input("Answer:"))
+            Y = numbers * Ran
+            numbers = Ran + 9
+            Ran = numbers + 4
+            if (input3 == Y ):
+                print("correct", point_list+1,("ponit"))
+            if (input3 != Y):
+                print("\nincorcet\nCorrect Answer",Y ,",",point_list- 1,("ponit"))
+   
+
+
+    if (input2_Lab == "Countdown" or "countdown"):
+        Custom_Timer_for_Countdown = int(input("How Many seconds would you Like?"))
+        for y in range (10):
+            Y = numbers * Ran
+            print("Countdown Mode\n",numbers,"*",Ran,"=")
+            countdown_time = Custom_Timer_for_Countdown
+            countdown(countdown_time)
+            input7 = int(input("time up, your final answer:"))
+            numbers = Ran +1
+            Ran = numbers + 1
+            H = 0
+            if input7 == Y:
+                print("corrct",H+1,("points"))
+            if input7 != Y:
+                print("not right",Y,H-1,("points"))
+          
+   
+    
+    restet = input("\nWould you like to try agien? Or enter 'quit' to stop the program:")
+    if restet == "quit":
+        sys.exit("you have ended the program")
+    if restet == "try":
+        input2_Lab
+        whole_code()    
+        
+
+
+input2_Lab = input("Hello this is a multiplication mini quiz.\n Modes(Normal, Infinty, Countdown)\nChosse Mode:")
+whole_code()
+
+  
+
+ 
+
+ 
+
+    
+    
+ 
+
+
+
