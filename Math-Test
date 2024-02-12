@@ -38,7 +38,7 @@ def whole_code():
             #countdown_custom(countdown_timer)
             #break
 
-    if (input2_Lab == "Infinty" or "infinty"):
+    if (input2_Lab == "Infinty"):
         while True:
             print("Infinty Mode\n",numbers,"*",Ran,"=")
             input_1 = int(input("Answer:"))
@@ -55,7 +55,7 @@ def whole_code():
 
     
     point_list = 0 
-    if (input2_Lab == "Normal" or "normal"):
+    if (input2_Lab == "Normal"):
         for i in range(10):
             print('Normal Mode\n',numbers, "*",Ran , "=")
             input3 = int(input("Answer:"))
@@ -69,7 +69,7 @@ def whole_code():
    
 
 
-    if (input2_Lab == "Countdown" or "countdown"):
+    if (input2_Lab == "Countdown"):
         Custom_Timer_for_Countdown = int(input("How Many seconds would you Like?"))
         for y in range (10):
             Y = numbers * Ran
@@ -85,8 +85,8 @@ def whole_code():
             if input7 != Y:
                 print("not right",Y,H-1,("points"))
           
-   
     
+
     restet = input("\nWould you like to try agien? Or enter 'quit' to stop the program:")
     if restet == "quit":
         sys.exit("you have ended the program")
@@ -98,7 +98,6 @@ def whole_code():
 
 input2_Lab = input("Hello this is a multiplication mini quiz.\n Modes(Normal, Infinty, Countdown)\nChosse Mode:")
 whole_code()
-
   
 
  
