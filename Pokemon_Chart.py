@@ -1,7 +1,6 @@
 import tkinter as tk
 root = tk.Tk()
 root.geometry("700x500")
-
 def normal_weak():
    labble = tk.Label(root,text="normal weakness")
    labble.pack()
@@ -230,37 +229,29 @@ def button_for_chart():
    steel = tk.Button(lastframe,text='STEEL',foreground="#D3D3D3",font=('arial',17),width=7,height=1,command=steel_weakness)
    steel.pack(side="left")
 
-   poison = tk.Button(lastframe,text='POISON',fg='purple',font=('arial',17),width=7,height=1,command=poison_weakness)
+   poison = tk.Button(lastframe,text='POISON',fg='purple',font=('arial',17),width=7,height=1)
    poison.pack(side="left")
 
-Entrybox1 = tk.Entry()
-Entrybox1.pack()
+
 labbleTop = tk.Label(root,text="Hello welcome to POkX.",font=('arial',18))
 labbleTop.pack()
+
 
 ButtonforPK = tk.Button(root,text="Click to view type chart!",command=button_for_chart)
 ButtonforPK.pack()
 
 
 
-
 my_topframe = tk.Frame(root,highlightthickness=4)
 my_topframe.pack()
+
+
 
 mybotton =tk.Frame(root,highlightthickness=4)
 mybotton.pack()
 
 lastframe = tk.Frame(root,highlightthickness=4)
 lastframe.pack()
-
-
-    
-
-
-   
-
-
-
 
 
 root.mainloop()
